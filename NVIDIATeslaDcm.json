@@ -1,19 +1,19 @@
 {
-    "@id": "urn:AzureIoT:NVIDIAJetsonNano:1",
+    "@id": "urn:AzureIoT:NVIDIATesla:1",
     "@type": "CapabilityModel",
     "implements": [],
     "displayName": {
-        "en": "NVIDIA Jetson Nano DCM"
+        "en": "NVIDIA Tesla DCM"
     },
     "contents": [
         {
-            "@id": "urn:AzureIoT:NVIDIAJetsonNano:IoTCentralBridge:1",
+            "@id": "urn:AzureIoT:NVIDIATesla:IoTCentralBridge:1",
             "@type": [
                 "Relationship",
                 "SemanticType/EdgeModule"
             ],
             "displayName": {
-                "en": "NVIDIA Jetson Nano"
+                "en": "NVIDIA Tesla"
             },
             "name": "IoTCentralBridge",
             "maxMultiplicity": 1,
@@ -637,7 +637,7 @@
                         }
                     ],
                     "displayName": {
-                        "en": "NVIDIAJetsonNano Module"
+                        "en": "NVIDIATesla Module"
                     },
                     "contents": [],
                     "@context": [

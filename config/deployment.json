@@ -10,7 +10,7 @@
             "loggingOptions": "",
             "registryCredentials": {
               "acr": {
-                "address": "ebertrams",
+                "address": "toolboc",
                 "password": "$CONTAINER_REGISTRY_PASSWORD",
                 "username": "$CONTAINER_REGISTRY_USERNAME"
               }
@@ -53,13 +53,13 @@
             "status": "running",
             "restartPolicy": "always",
             "settings": {
-              "image": "marketplace.azurecr.io/nvidia/deepstream-iot2-l4t:latest",
+              "image": "marketplace.azurecr.io/nvidia/deepstream-iot2:latest",
               "createOptions": "{\"Entrypoint\":[\"/usr/bin/deepstream-test5-app\",\"-c\",\"DSConfig.txt\"],\"HostConfig\":{\"runtime\":\"nvidia\",\"NetworkMode\":\"host\",\"Binds\":[\"/data/misc/storage:/data/misc/storage\"]},\"NetworkingConfig\":{\"EndpointsConfig\":{\"host\":{}}},\"WorkingDir\":\"/data/misc/storage\"}"
             }
           },
           "IoTCentralBridge": {
             "settings": {
-              "image": "ebertrams/iotcentralbridge:0.1.0-arm64v8",
+              "image": "toolboc/iotcentralbridge:0.1.0-amd64",
               "createOptions": "{\"HostConfig\":{\"PortBindings\":{\"9010/tcp\":[{\"HostPort\":\"9014\"}]},\"Binds\":[\"/data/misc:/data/misc\",\"/run/systemd:/run/systemd\",\"/var/run/docker.sock:/var/run/docker.sock\"],\"NetworkMode\":\"host\"},\"NetworkingConfig\":{\"EndpointsConfig\":{\"host\":{}}}}"
             },
             "type": "docker",

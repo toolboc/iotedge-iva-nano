@@ -73,7 +73,7 @@
                       "status": "running",
                       "restartPolicy": "always",
                       "settings": {
-                          "image": "marketplace.azurecr.io/nvidia/deepstream-iot2-l4t:latest",
+                          "image": "marketplace.azurecr.io/nvidia/deepstream-iot2:latest",
                           "createOptions": {
                             "Entrypoint": [
                                 "/usr/bin/deepstream-test5-app",
@@ -92,7 +92,7 @@
                   },
                   "IoTCentralBridge": {
                       "settings": {
-                          "image": "${MODULES.IoTCentralBridge.arm64v8}",
+                          "image": "${MODULES.IoTCentralBridge.amd64}",
                           "createOptions": {
                             "HostConfig": {
                                 "PortBindings": {
